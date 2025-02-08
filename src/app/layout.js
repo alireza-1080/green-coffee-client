@@ -7,3 +7,12 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+const metadata = {
+  title: 'Green Coffee',
+  icons: {
+    icon: '/favicon.ico',
+  },
+};
+
+export { metadata };

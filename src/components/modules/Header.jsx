@@ -36,14 +36,15 @@ const Header = () => {
   },[]);
 
   React.useEffect(() => {
-    stickyHeaderElement.current.classList.toggle('md:py-2', !isSticky);
-    stickyHeaderElement.current.classList.toggle('md:rounded-xl', !isSticky);
+    stickyHeaderElement.current.classList.toggle('lg:py-2', !isSticky);
+    stickyHeaderElement.current.classList.toggle('lg:rounded-xl', !isSticky);
+    stickyHeaderElement.current.classList.toggle('lg:w-4/5', !isSticky);
   }, [isSticky]);
 
   return (
-    <div ref={stickyHeaderElement} className="md:container md:mx-auto md:mt-12 md:sticky md:top-0 md:z-50 md:rounded-xl md:overflow-hidden md:shadow-md md:bg-white md:px-4 md:py-2 md:mb-4 transition-all md:font-bold">
+    <div ref={stickyHeaderElement} className="lg:container lg:w-4/5 lg:mx-auto lg:mt-12 lg:sticky lg:top-0 lg:z-50 lg:rounded-xl lg:overflow-hidden lg:shadow-md lg:bg-white lg:px-4 lg:py-2 lg:mb-4 transition-all lg:font-bold">
       <header className="flex items-center bg-white p-2">
-        <div className="md:order-3">
+        <div className="lg:order-3">
           {/* Move signin/signup or user profile here  
         { title: 'Sign in / Sign up', link: '/auth' },
     {
@@ -59,7 +60,7 @@ const Header = () => {
     },*/}
           logos
         </div>
-        <div className="grow flex justify-center md:order-1 md:grow-0">
+        <div className="grow flex justify-center lg:order-1 lg:grow-0 shrink-0">
           <Link href="/">
             <Image
               priority
@@ -71,7 +72,7 @@ const Header = () => {
             ></Image>
           </Link>
         </div>
-        <div className="md:order-2 md:grow">
+        <div className="lg:order-2 lg:grow">
           <HeaderNav navItems={navItems} />
         </div>
       </header>

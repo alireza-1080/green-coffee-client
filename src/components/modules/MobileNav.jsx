@@ -35,7 +35,7 @@ const MobileNav = ({ navItems }) => {
   }, [isMenuOpen]);
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <div className="w-6 h-6 relative z-50" onClick={handleMenu}>
         <div
           ref={burgerMenuElem}

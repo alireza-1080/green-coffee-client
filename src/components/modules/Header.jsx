@@ -36,10 +36,8 @@ const Header = () => {
   },[]);
 
   React.useEffect(() => {
-    stickyHeaderElement.current.classList.toggle('md:py-0', isSticky);
-    stickyHeaderElement.current.classList.toggle('md:rounded-none', isSticky);
-    stickyHeaderElement.current.classList.toggle('md:font-normal', isSticky);
-    
+    stickyHeaderElement.current.classList.toggle('md:py-2', !isSticky);
+    stickyHeaderElement.current.classList.toggle('md:rounded-xl', !isSticky);
   }, [isSticky]);
 
   return (

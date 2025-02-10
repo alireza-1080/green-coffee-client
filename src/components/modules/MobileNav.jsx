@@ -36,16 +36,16 @@ const MobileNav = ({ navItems }) => {
 
   return (
     <div className="lg:hidden">
-      <div className="w-6 h-6 relative z-50" onClick={handleMenu}>
+      <div className="w-6 md:w-8 h-6 md:h-8 relative z-50" onClick={handleMenu}>
         <div
           ref={burgerMenuElem}
-          className="w-6 absolute top-0 right-0 transition "
+          className="w-6 md:w-8 absolute top-0 right-0 transition "
         >
           <img className="w-full" src="/svg/menu-burger.svg" alt="menu-buger" />
         </div>
         <div
           ref={crossMenuElem}
-          className="w-6 absolute top-0 right-0 scale-0 transition  delay-150"
+          className="w-6 md:w-8 absolute top-0 right-0 scale-0 transition  delay-150"
         >
           <img className="w-full" src="/svg/cross.svg" alt="cross" />
         </div>

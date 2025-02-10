@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <div ref={stickyHeaderElement} className="lg:container lg:w-4/5 lg:mx-auto lg:mt-12 lg:sticky lg:top-0 lg:z-50 lg:rounded-xl lg:overflow-hidden lg:shadow-md lg:bg-white lg:px-4 lg:py-2 lg:mb-4 transition-all lg:font-bold">
-      <header className="flex items-center bg-white p-2">
+      <header className="flex items-center bg-white py-2 px-5">
         <div className="lg:order-3">
           {/* Move signin/signup or user profile here  
         { title: 'Sign in / Sign up', link: '/auth' },

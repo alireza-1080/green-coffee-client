@@ -3,10 +3,9 @@ import React from 'react';
 import HeaderNav from './HeaderNav';
 import Image from 'next/image';
 import Link from 'next/link';
+import HeaderUserSection from './HeaderUserSection';
 
 const Header = () => {
-
-  const stickyHeaderElement = React.useRef(null);
 
   //! This should be fetched from the backend
   const navItems = [
@@ -19,7 +18,16 @@ const Header = () => {
   ];
 
   //! This should be fetched from the backend
-  const isUserLoggedIn = false;
+  const userProfileMenu = [
+    { title: 'Cart', link: '/`art' },
+    { title: 'Tickets', link: '/tickets' },
+    { title: 'Comments', link: '/comments' },
+    { title: 'Whishlist', link: '/whishlist' },
+    { title: 'Details', link: '/details' },
+  ];
+
+  //! This should be fetched from the backend
+  const isUserLoggedIn = true;
 
   const [isSticky, setIsSticky] = React.useState(false);
 
@@ -33,32 +41,15 @@ const Header = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  },[]);
-
-  React.useEffect(() => {
-    stickyHeaderElement.current.classList.toggle('lg:py-2', !isSticky);
-    stickyHeaderElement.current.classList.toggle('lg:rounded-xl', !isSticky);
-    stickyHeaderElement.current.classList.toggle('lg:w-4/5', !isSticky);
-  }, [isSticky]);
+  }, []);
 
   return (
-    <div ref={stickyHeaderElement} className="lg:container lg:w-4/5 lg:mx-auto lg:mt-12 lg:sticky lg:top-0 lg:z-50 lg:rounded-xl lg:overflow-hidden lg:shadow-md lg:bg-white lg:px-4 lg:py-2 lg:mb-4 transition-all lg:font-bold">
+    <div
+      className={`lg:container ${!isSticky && 'lg:w-4/5'} lg:mx-auto lg:mt-12 lg:sticky lg:top-0 lg:z-50 ${!isSticky && 'lg:rounded-xl'} lg:overflow-hidden lg:shadow-md lg:bg-white lg:px-4 ${!isSticky && 'lg:py-2'} lg:mb-4 transition-all lg:font-bold`}
+    >
       <header className="flex items-center bg-white py-2 px-5">
         <div className="lg:order-3">
-          {/* Move signin/signup or user profile here  
-        { title: 'Sign in / Sign up', link: '/auth' },
-    {
-      title: 'User Profile',
-      link: '/profile',
-      subMenu: [
-        { title: 'Orders', link: '/orders' },
-        { title: 'Tickets', link: '/tickets' },
-        { title: 'Comments', link: '/comments' },
-        { title: 'Whishlist', link: '/whishlist' },
-        { title: 'Details', link: '/details' },
-      ],
-    },*/}
-          logos
+          <HeaderUserSection isUserLoggedIn={isUserLoggedIn} userProfileMenu={userProfileMenu} />
         </div>
         <div className="grow flex justify-center lg:order-1 lg:grow-0 shrink-0">
           <Link href="/">

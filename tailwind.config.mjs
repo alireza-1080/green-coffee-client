@@ -6,7 +6,12 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'green-dark': '#128945',
+        'green-light': '#8cc63e',
+      },
+    },
   },
   plugins: [],
 };

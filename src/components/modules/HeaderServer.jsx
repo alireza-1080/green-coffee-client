@@ -47,7 +47,7 @@ const HeaderServer = () => {
   ];
 
   //! This should be fetched from the backend
-  const isUserLoggedIn = false;
+  const isUserLoggedIn = true;
 
   return (
     <>

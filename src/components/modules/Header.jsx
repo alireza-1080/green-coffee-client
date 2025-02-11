@@ -1,11 +1,15 @@
 'use client';
 import React from 'react';
 import HeaderNav from './HeaderNav';
-import Image from 'next/image';
-import Link from 'next/link';
 import HeaderUserSection from './HeaderUserSection';
+import HeaderImage from './HeaderImage';
+import { usePathname } from 'next/navigation';
 
 const Header = ({ navItems, userProfileMenu, isUserLoggedIn }) => {
+
+  const path = usePathname();
+  const pathArray = path.split('/');
+
   const [isSticky, setIsSticky] = React.useState(false);
 
   React.useEffect(() => {
@@ -28,7 +32,7 @@ const Header = ({ navItems, userProfileMenu, isUserLoggedIn }) => {
         !isSticky && 'lg:rounded-xl'
       }  lg:shadow-md lg:bg-white lg:px-4 ${
         !isSticky && 'lg:py-2'
-      } lg:mb-4 transition-all lg:font-bold`}
+      } lg:mb-4 transition-all`}
     >
       <header className="flex items-center bg-white py-2 px-5">
         <div className="lg:order-3">
@@ -38,19 +42,10 @@ const Header = ({ navItems, userProfileMenu, isUserLoggedIn }) => {
           />
         </div>
         <div className="grow flex justify-center lg:order-1 lg:grow-0 shrink-0">
-          <Link href="/">
-            <Image
-              priority
-              className="w-20 h-20"
-              src={'/png/logo-text.png'}
-              width={100}
-              height={100}
-              alt="Green Coffee Logo"
-            ></Image>
-          </Link>
+          <HeaderImage />
         </div>
         <div className="lg:order-2 lg:grow">
-          <HeaderNav navItems={navItems} />
+          <HeaderNav navItems={navItems} pathArray={pathArray}/>
         </div>
       </header>
     </div>

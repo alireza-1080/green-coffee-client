@@ -17,11 +17,13 @@ const HeaderUserSection = ({ isUserLoggedIn, userProfileMenu }) => {
       )}
       {isUserLoggedIn && (
         <div  className="relative group">
+          <Link href="/user">
           <img
             className="w-6 md:w-8 h-6 md:h-8 cursor-pointer"
             src="/svg/user.svg"
             alt="sign-in-alt"
           />
+          </Link>
           <HedaerUserProfileSubMenuSection userProfileMenu={userProfileMenu} />
         </div>
       )}

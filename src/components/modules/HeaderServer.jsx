@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Header from './Header.jsx';
 
 const HeaderServer = () => {
-
-    //! This should be fetched from the backend
+  //! This should be fetched from the backend
   const navItems = [
     { title: 'Home', link: '/' },
     { title: 'Shop', link: '/shop' },
@@ -17,31 +16,31 @@ const HeaderServer = () => {
   const userProfileMenu = [
     {
       title: 'Cart',
-      link: '/cart',
+      link: '/user/cart',
       image: '/svg/shopping-cart.svg',
       alt: 'shopping-cart',
     },
     {
       title: 'Tickets',
-      link: '/tickets',
+      link: '/user/tickets',
       image: '/svg/user-headset.svg',
       alt: 'user-headset',
     },
     {
       title: 'Comments',
-      link: '/comments',
+      link: '/user/comments',
       image: '/svg/comment-alt.svg',
       alt: 'comment-alt',
     },
     {
       title: 'Wishlist',
-      link: '/whishlist',
+      link: '/user/whishlist',
       image: '/svg/wishlist-heart.svg',
       alt: 'wishlist-heart',
     },
     {
       title: 'Details',
-      link: '/details',
+      link: '/user/details',
       image: '/svg/attention-detail.svg',
       alt: 'attention-detail',
     },
@@ -52,9 +51,13 @@ const HeaderServer = () => {
 
   return (
     <>
-    <Header navItems={navItems} userProfileMenu={userProfileMenu} isUserLoggedIn={isUserLoggedIn} />
+      <Header
+        navItems={navItems}
+        userProfileMenu={userProfileMenu}
+        isUserLoggedIn={isUserLoggedIn}
+      />
     </>
-  )
-}
+  );
+};
 
-export default HeaderServer
+export default HeaderServer;

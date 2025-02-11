@@ -1,13 +1,12 @@
-'use client';
 import React from 'react';
 import Link from 'next/link';
 
 const DesktopNavItem = ({ pathArray, item }) => {
-  const [isActive] = React.useState(item.link === `/${pathArray}`);
+  const [isActive, setIsActive] = React.useState(false);
 
-  if (item.title === 'Home') {
-    console.log(item.link === `/${pathArray}`)
-  }
+  React.useEffect(() => {
+    setIsActive(item.link.split('/')[1] === pathArray[1])
+  }, [pathArray, item.link]);
 
   return (
     <Link href={item.link}>

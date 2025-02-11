@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
-import Link from 'next/link';
+import MobileNavItem from './MobileNavItem';
 
-const MobileNav = ({ navItems }) => {
-
+const MobileNav = ({ navItems, pathArray }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [showNavBackground, setShowNavBackground] = React.useState(false);
 
@@ -61,21 +60,7 @@ const MobileNav = ({ navItems }) => {
           } transition-transform duration-300 ease-in-out flex flex-col gap-6`}
         >
           {navItems.map((item, index) => {
-            return (
-              <li key={index} className="w-40 bg-gray-800 py-2 px-4 rounded-md group">
-                <Link
-                  href={item.link}
-                  className="w-full flex justify-between items-center group-hover:text-green-light"
-                >
-                  <h6 className="text-gray-50 group-hover:text-green-light">{item.title}</h6>
-                  <img
-                    src="/svg/angle-small-right.svg"
-                    alt="angle-small-right"
-                    className="w-4"
-                  />
-                </Link>
-              </li>
-            );
+            return <MobileNavItem key={index} item={item} pathArray={pathArray}/>;
           })}
         </ul>
       </div>

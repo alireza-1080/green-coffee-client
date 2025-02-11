@@ -39,6 +39,7 @@ const Header = ({ navItems, userProfileMenu, isUserLoggedIn }) => {
           <HeaderUserSection
             isUserLoggedIn={isUserLoggedIn}
             userProfileMenu={userProfileMenu}
+            pathArray={pathArray}
           />
         </div>
         <div className="grow flex justify-center lg:order-1 lg:grow-0 shrink-0">

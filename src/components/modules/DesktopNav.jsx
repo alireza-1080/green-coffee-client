@@ -7,7 +7,7 @@ const DesktopNav = ({ navItems, pathArray }) => {
       <ul className='flex space-x-1'>
         {navItems.map((item, index) => {
           return (
-            <DesktopNavItem key={index} pathArray={pathArray[1]} item={item} />
+            <DesktopNavItem key={index} pathArray={pathArray} item={item} />
           );
         })}
       </ul>

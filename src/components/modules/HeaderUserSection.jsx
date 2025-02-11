@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import HedaerUserProfileSubMenuSection from './HedaerUserProfileSubMenuSection.jsx'; 
 
-const HeaderUserSection = ({ isUserLoggedIn, userProfileMenu }) => {
+const HeaderUserSection = ({ isUserLoggedIn, userProfileMenu, pathArray }) => {
 
   return (
     <div className="rounded-full relative">
@@ -24,7 +24,7 @@ const HeaderUserSection = ({ isUserLoggedIn, userProfileMenu }) => {
             alt="sign-in-alt"
           />
           </Link>
-          <HedaerUserProfileSubMenuSection userProfileMenu={userProfileMenu} />
+          <HedaerUserProfileSubMenuSection userProfileMenu={userProfileMenu} pathArray={pathArray}/>
         </div>
       )}
     </div>

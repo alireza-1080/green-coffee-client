@@ -1,16 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
 
-const MobileNavItem = ({ item, pathArray }) => {
+const MobileNavItem = ({ item, pathArray, setIsMenuOpen }) => {
   const [isActive, setIsActive] = React.useState(false);
 
   React.useEffect(() => {
     setIsActive(item.link.split('/')[1] === pathArray[1]);
   }, [pathArray, item.link]);
 
+  const handleMenuClose = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <Link
       href={item.link}
+      onClick={handleMenuClose}
       className={`w-40 bg-gray-800 py-2 px-4 rounded-md group ${
         isActive && 'border-l-4 border-green-light'
       }`}

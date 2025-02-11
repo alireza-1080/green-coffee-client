@@ -60,7 +60,7 @@ const MobileNav = ({ navItems, pathArray }) => {
           } transition-transform duration-300 ease-in-out flex flex-col gap-6`}
         >
           {navItems.map((item, index) => {
-            return <MobileNavItem key={index} item={item} pathArray={pathArray}/>;
+            return <MobileNavItem key={index} item={item} pathArray={pathArray} setIsMenuOpen={setIsMenuOpen}/>;
           })}
         </ul>
       </div>

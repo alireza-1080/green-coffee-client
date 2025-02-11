@@ -6,10 +6,11 @@ const HedaerUserProfileSubMenuItem = ({ item, pathArray }) => {
   const ItemLinkArray = item.link.split('/');
 
   React.useEffect(() => {
-    pathArray[1] === ItemLinkArray[1] &&
-      pathArray[2] === ItemLinkArray[2] &&
-      setIsActive(true);
-  }, [pathArray, ItemLinkArray]);
+    if (pathArray[1] === ItemLinkArray[1] && pathArray[2] === ItemLinkArray[2]) {
+     return  setIsActive(true);
+    }
+    return setIsActive(false);
+  }, [pathArray[1], pathArray[2], ItemLinkArray[1], ItemLinkArray[2]]);
 
   return (
     <Link

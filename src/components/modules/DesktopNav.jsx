@@ -7,7 +7,7 @@ const DesktopNav = ({ navItems }) => {
       <ul className='flex space-x-1'>
         {navItems.map((item, index) => {
           return (
-            <li className='text-gray-800 transition px-3 py-2 rounded-md hover:bg-green-300' key={index}>
+            <li className='text-gray-800 transition px-3 py-2 rounded-md hover:bg-green-light' key={index}>
               <Link href={item.link}>
                 <h6>{item.title}</h6>
               </Link>

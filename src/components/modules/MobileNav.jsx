@@ -3,10 +3,6 @@ import React from 'react';
 import Link from 'next/link';
 
 const MobileNav = ({ navItems }) => {
-  // const burgerMenuElem = React.useRef(null);
-  // const crossMenuElem = React.useRef(null);
-  // const navElem = React.useRef(null);
-  // const navBackgroundElem = React.useRef(null);
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [showNavBackground, setShowNavBackground] = React.useState(false);
@@ -66,12 +62,12 @@ const MobileNav = ({ navItems }) => {
         >
           {navItems.map((item, index) => {
             return (
-              <li key={index} className="w-40 bg-gray-800 py-2 px-4 rounded-md">
+              <li key={index} className="w-40 bg-gray-800 py-2 px-4 rounded-md group">
                 <Link
                   href={item.link}
-                  className="w-full flex justify-between items-center"
+                  className="w-full flex justify-between items-center group-hover:text-green-light"
                 >
-                  <h6 className="text-gray-50">{item.title}</h6>
+                  <h6 className="text-gray-50 group-hover:text-green-light">{item.title}</h6>
                   <img
                     src="/svg/angle-small-right.svg"
                     alt="angle-small-right"

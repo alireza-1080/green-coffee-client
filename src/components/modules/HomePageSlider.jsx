@@ -72,7 +72,6 @@ const HedaerSlider = () => {
           loop={true}
         >
           <SwiperSlide>
-            {/* <div className="relative w-full max-h-[calc(100vh-96px)] aspect-[9/16]"> */}
             <div className="relative w-full aspect-[9/16]">
               <Image
                 src={'/slider/mobile/slider-1.jpg'}
@@ -85,7 +84,6 @@ const HedaerSlider = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            {/* <div className="relative w-full max-h-[calc(100vh-96px)] aspect-[9/16]"> */}
             <div className="relative w-full aspect-[9/16]">
               <Image
                 src={'/slider/mobile/slider-2.jpg'}
@@ -98,7 +96,6 @@ const HedaerSlider = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            {/* <div className="relative w-full max-h-[calc(100vh-96px)] aspect-[9/16]"> */}
             <div className="relative w-full aspect-[9/16]">
               <Image
                 src={'/slider/mobile/slider-3.jpg'}
@@ -111,7 +108,6 @@ const HedaerSlider = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            {/* <div className="relative w-full max-h-[calc(100vh-96px)] aspect-[9/16]"> */}
             <div className="relative w-full aspect-[9/16]">
               <Image
                 src={'/slider/mobile/slider-4.jpg'}

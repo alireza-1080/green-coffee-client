@@ -1,7 +1,6 @@
 import React from 'react';
-import Header from './Header.jsx';
 
-const HeaderServer = () => {
+const HeaderServer = ({ children }) => {
   //! This should be fetched from the backend
   const navItems = [
     { title: 'Home', link: '/' },
@@ -51,11 +50,13 @@ const HeaderServer = () => {
 
   return (
     <>
-      <Header
-        navItems={navItems}
-        userProfileMenu={userProfileMenu}
-        isUserLoggedIn={isUserLoggedIn}
-      />
+      {React.Children.map(children, (child) => {
+        return React.cloneElement(child, {
+          navItems,
+          userProfileMenu,
+          isUserLoggedIn,
+        });
+      })}
     </>
   );
 };

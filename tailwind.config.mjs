@@ -11,6 +11,9 @@ export default {
         'green-dark': '#128945',
         'green-light': '#8cc63e',
       },
+      screens: {
+        'large-mobile': '425px',
+      },
     },
   },
   plugins: [],

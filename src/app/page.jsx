@@ -1,8 +1,11 @@
 import React from 'react'
+import HomePageHeader from '../components/templates/HomePageHeader.jsx'
 
 const Home = () => {
   return (
-    <div className='text-3xl text text-yellow-400 text-center mt-72'>Home</div>
+    <div className='h-[1000vh]'>
+      <HomePageHeader />
+    </div>
   )
 }
 

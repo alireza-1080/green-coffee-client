@@ -24,6 +24,14 @@ const MobileNav = ({ navItems, pathArray }) => {
     }
   }, [isMenuOpen]);
 
+  React.useEffect(() => {
+    if (showNavBackground) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [showNavBackground]);
+
   return (
     <div className="lg:hidden">
       <div
@@ -44,14 +52,18 @@ const MobileNav = ({ navItems, pathArray }) => {
             !isMenuOpen && 'scale-0'
           } transition  ${isMenuOpen && 'delay-150'}`}
         >
-          <img className="w-full" src="/png/cross-green-light.png" alt="cross-green-light" />
+          <img
+            className="w-full"
+            src="/png/cross-green-light.png"
+            alt="cross-green-light"
+          />
         </div>
       </div>
       <div
         onClick={handleMenu}
-        className={`fixed top-0 left-0 -z-40 bg-black/50 backdrop-blur-sm w-screen h-screen ${
-          isMenuOpen && 'z-40'
-        } ${showNavBackground && 'z-40'}`}
+        className={`fixed top-0 left-0 scale-0 bg-black/50 backdrop-blur-sm w-screen h-screen ${
+          showNavBackground && 'scale-100'
+        }`}
       >
         <ul
           onClick={handleNavChangeMenuPrevention}
@@ -60,7 +72,14 @@ const MobileNav = ({ navItems, pathArray }) => {
           } transition-transform duration-300 ease-in-out flex flex-col gap-6`}
         >
           {navItems.map((item, index) => {
-            return <MobileNavItem key={index} item={item} pathArray={pathArray} setIsMenuOpen={setIsMenuOpen}/>;
+            return (
+              <MobileNavItem
+                key={index}
+                item={item}
+                pathArray={pathArray}
+                setIsMenuOpen={setIsMenuOpen}
+              />
+            );
           })}
         </ul>
       </div>

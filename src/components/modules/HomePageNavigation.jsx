@@ -5,13 +5,33 @@ import HeaderUserSection from './HeaderUserSection';
 import HeaderImage from './HeaderImage';
 import { usePathname } from 'next/navigation';
 
-const Header = ({ navItems, userProfileMenu, isUserLoggedIn }) => {
+const HomePageNavigation = ({ navItems, userProfileMenu, isUserLoggedIn }) => {
   const path = usePathname();
   const pathArray = path.split('/');
 
+  const [isSticky, setIsSticky] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 48);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="lg:container lg:mx-auto sticky top-0 z-50">
-      <header className="flex items-center bg-white py-2 px-5">
+    <div
+      className={`lg:container ${
+        !isSticky && 'lg:w-4/5'
+      } lg:mx-auto lg:mt-12 lg:sticky lg:top-0 lg:z-50 ${
+        !isSticky && 'lg:rounded-xl'
+      }  lg:shadow-md bg-white lg:px-4 transition-all`}
+    >
+      <header className="flex items-center py-2 px-5">
         <div className="lg:order-3">
           <HeaderUserSection
             isUserLoggedIn={isUserLoggedIn}
@@ -30,4 +50,4 @@ const Header = ({ navItems, userProfileMenu, isUserLoggedIn }) => {
   );
 };
 
-export default Header;
+export default HomePageNavigation;

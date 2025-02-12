@@ -11,7 +11,7 @@ const DesktopNavItem = ({ pathArray, item }) => {
   return (
     <Link href={item.link}>
       <li
-        className={`text-gray-800 transition-all px-3 py-2 rounded-md bg-white hover:bg-green-light`}
+        className={`text-gray-800 transition-all px-3 py-2 rounded-md  hover:bg-green-light`}
       >
         <h6
           className={`font-bold ${

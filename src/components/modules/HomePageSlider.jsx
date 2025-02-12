@@ -11,7 +11,6 @@ const HedaerSlider = () => {
   return (
     <>
       {/* //! Desktop Slider */}
-      {/* <div className="hidden large-mobile:block lg:container mx-auto lg:-mt-[160px]"> */}
       <div className="hidden md:block lg:container mx-auto lg:-mt-[160px]">
         <Swiper
           className="mySwiper w-full"
@@ -64,7 +63,6 @@ const HedaerSlider = () => {
       </div>
 
       {/* //! Mobile Slider */}
-      {/* <div className="large-mobile:hidden w-full h-full mx-auto "> */}
       <div className="md:hidden w-full h-full mx-auto ">
         <Swiper
           className="mySwiper w-full h-fit"

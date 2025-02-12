@@ -27,7 +27,7 @@ const MobileNav = ({ navItems, pathArray }) => {
   return (
     <div className="lg:hidden">
       <div
-        className={`w-6 md:w-8 h-6 md:h-8 ${
+        className={`w-6 md:w-8 h-6 md:h-8 cursor-pointer ${
           isMenuOpen ? 'fixed top-8 right-3' : 'relative'
         } z-50 transition-all`}
         onClick={handleMenu}
@@ -44,7 +44,7 @@ const MobileNav = ({ navItems, pathArray }) => {
             !isMenuOpen && 'scale-0'
           } transition  ${isMenuOpen && 'delay-150'}`}
         >
-          <img className="w-full" src="/svg/cross.svg" alt="cross" />
+          <img className="w-full" src="/png/cross-green-light.png" alt="cross-green-light" />
         </div>
       </div>
       <div

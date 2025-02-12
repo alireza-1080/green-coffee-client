@@ -67,7 +67,7 @@ const MobileNav = ({ navItems, pathArray }) => {
       >
         <ul
           onClick={handleNavChangeMenuPrevention}
-          className={`bg-gray-900 w-fit h-screen overflow-y-auto pt-8 pb-20 px-14 ${
+          className={`bg-gray-900 w-fit h-screen overflow-y-auto pt-8 pb-40 px-14 ${
             !isMenuOpen && '-translate-x-full'
           } transition-transform duration-300 ease-in-out flex flex-col gap-6`}
         >

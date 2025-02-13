@@ -25,13 +25,7 @@ const HomePageNavigation = ({ navItems, userProfileMenu, isUserLoggedIn }) => {
 
   return (
     <div
-      className={`lg:container ${
-        !isSticky && 'lg:w-4/5'
-      } lg:mx-auto lg:mt-12 lg:sticky lg:top-0 lg:z-50 ${
-        !isSticky && 'lg:rounded-xl'
-      }  lg:shadow-xl ${
-        !isSticky ? 'bg-white/60 backdrop-blur-sm' : 'bg-white backdrop-blur-none'
-      } lg:px-4 transition-all`}
+      className={`lg:container ${!isSticky && 'lg:w-4/5'} lg:mx-auto lg:mt-12 lg:sticky lg:top-0 lg:z-50 ${!isSticky && 'lg:rounded-xl'}  lg:shadow-xl bg-white ${!isSticky ? 'lg:bg-white/60 backdrop-blur-sm' : 'bg-white backdrop-blur-none'} lg:px-4 transition-all`}
     >
       <header className="flex items-center py-2 px-5">
         <div className="lg:order-3">

@@ -14,6 +14,8 @@ export default function RootLayout({ children }) {
 
 const metadata = {
   title: 'Green Coffee',
+  description: 'Green Coffee, the best coffee in the world',
+  author: 'Alireza Aberoumand :)',
   icons: {
     icon: '/favicon.ico',
   },

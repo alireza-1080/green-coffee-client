@@ -7,7 +7,7 @@ const LatestProductsTopSection = () => {
     <div className="flex justify-between items-center px-2 py-6">
         <h1 className="font-bold">Latest Products</h1>
         <Link href="/products">
-          <div className="flex items-center gap-1 group">
+          <div className="flex items-center gap-1 group  xl:-translate-x-4">
             <p className="group-hover:text-green-dark">View All</p>
             <Image
               src={'/png/arrow-small-right.png'}

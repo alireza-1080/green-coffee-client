@@ -1,7 +1,7 @@
 import React from 'react';
-import HomePageNavigation from '../modules/HomePageNavigation.jsx';
-import HedaerSlider from '../modules/HomePageSlider.jsx';
-import HeaderServer from '../modules/HeaderServer.jsx';
+import HomePageNavigation from '@/components/modules/HomePageNavigation.jsx';
+import HomePageSlider from '@/components/modules/HomePageSlider.jsx';
+import HeaderServer from '@/components/server/HeaderServer.jsx';
 
 const HomePageHeader = () => {
   return (
@@ -11,7 +11,7 @@ const HomePageHeader = () => {
           <HomePageNavigation />
         </HeaderServer>
       </div>
-      <HedaerSlider />
+      <HomePageSlider />
     </>
   );
 };

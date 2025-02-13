@@ -12,6 +12,9 @@ const HomePageNavigation = ({ navItems, userProfileMenu, isUserLoggedIn }) => {
   const [isSticky, setIsSticky] = React.useState(false);
 
   React.useEffect(() => {
+
+    setIsSticky(window.scrollY > 48);
+
     const handleScroll = () => {
       setIsSticky(window.scrollY > 48);
     };

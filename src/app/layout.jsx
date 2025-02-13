@@ -1,5 +1,6 @@
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
+import AosInit from '@/components/modules/AosInit';
 
 export default function RootLayout({ children }) {
   return (
@@ -7,6 +8,7 @@ export default function RootLayout({ children }) {
       <body className="bg-gray-500">
         {children}
         <Toaster />
+        <AosInit />
       </body>
     </html>
   );

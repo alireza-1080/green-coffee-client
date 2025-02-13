@@ -4,7 +4,7 @@ const HeaderServer = ({ children }) => {
   //! This should be fetched from the backend
   const navItems = [
     { title: 'Home', link: '/' },
-    { title: 'Shop', link: '/shop' },
+    { title: 'Products', link: '/products' },
     { title: 'Blog', link: '/blog' },
     { title: 'Contact', link: '/contact' },
     { title: 'About', link: '/about' },

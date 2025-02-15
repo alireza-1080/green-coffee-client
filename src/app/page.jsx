@@ -16,12 +16,11 @@
 import React from 'react';
 
 const handleTestServerConnection = async () => {
-  const response = await fetch('https://green-coffee-server.vercel.app/', {
+  const response = await fetch('https://green-coffee-server.vercel.app', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
-    credentials: 'include',
   });
 
   const data = await response.json();

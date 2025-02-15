@@ -68,7 +68,7 @@ const handleDeleteCookie = async () => {
 const HomePage = () => {
   return (
     <div className="w-full h-screen bg-gradient-to-r from-lime-500 to-sky-500 flex flex-col gap-8 justify-center items-center">
-      <button onClick={} className="px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg shadow-md hover:from-green-500 hover:to-blue-600 active:from-green-600 active:to-blue-700 transition duration-300 ease-in-out">
+      <button onClick={handleTestServerConnection} className="px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg shadow-md hover:from-green-500 hover:to-blue-600 active:from-green-600 active:to-blue-700 transition duration-300 ease-in-out">
         Test Server Connection
       </button>
       <button onClick={handleSetCookie} className="px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg shadow-md hover:from-green-500 hover:to-blue-600 active:from-green-600 active:to-blue-700 transition duration-300 ease-in-out">

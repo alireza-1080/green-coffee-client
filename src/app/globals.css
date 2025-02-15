@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+      @apply scrollbar-custom;
+    }
+  }
+
+  :root {
+    --swiper-theme-color: #8cc63e;
+    --swiper-pagination-bullet-inactive-color: #128945;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-color: #8cc63e;
+    --swiper-pagination-bullet-active-color: #8cc63e;
+  }
+  
+  /* Override Swiper's default styles */
+  .swiper-pagination-bullet-active {
+    background: var(--swiper-pagination-bullet-active-color) !important;
+  }
+  
+  .swiper-pagination-bullet {
+    background: var(--swiper-pagination-bullet-inactive-color);
+    opacity: var(--swiper-pagination-bullet-inactive-opacity);
+  }

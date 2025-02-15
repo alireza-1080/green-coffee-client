@@ -15,6 +15,24 @@
 'use client';
 import React from 'react';
 
+const handleTestServerConnection = async () => {
+  const response = await fetch('https://green-coffee-server.vercel.app/', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+  });
+
+  const data = await response.json();
+
+  if (response.ok) {
+    console.log(data);
+  } else {
+    console.error('Failed to connect to server!');
+  }
+}
+
 const handleSetCookie = async () => {
   const response = await fetch('https://green-coffee-server.vercel.app/api/set-cookie', {
     method: 'GET',
@@ -50,6 +68,9 @@ const handleDeleteCookie = async () => {
 const HomePage = () => {
   return (
     <div className="w-full h-screen bg-gradient-to-r from-lime-500 to-sky-500 flex flex-col gap-8 justify-center items-center">
+      <button onClick={} className="px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg shadow-md hover:from-green-500 hover:to-blue-600 active:from-green-600 active:to-blue-700 transition duration-300 ease-in-out">
+        Test Server Connection
+      </button>
       <button onClick={handleSetCookie} className="px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg shadow-md hover:from-green-500 hover:to-blue-600 active:from-green-600 active:to-blue-700 transition duration-300 ease-in-out">
         Set Cookie
       </button>

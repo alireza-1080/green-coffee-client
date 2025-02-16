@@ -17,7 +17,7 @@ const BuyCoffeLikeProContent = () => {
       data-aos-delay="500"
       className="text-grey-dark text-xl md:text-2xl text-center">
         {`Match today's beauty with `}
-        <span className="group-hover:text-green-dark group-hover:font-bold">
+        <span className="group-hover:text-green-dark group-hover:font-bold transition-all">
           coffee
         </span>
       </h3>

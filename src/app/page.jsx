@@ -6,7 +6,7 @@ import WhatMakesUsDifferent from '@/components/templates/Home/WhatMakesUsDiffere
 
 const Home = () => {
   return (
-    <div className='mb-96'>
+    <div>
       <HomePageHeader />
       <LatestProducts />
       <BuyCoffeeLikeProSection />

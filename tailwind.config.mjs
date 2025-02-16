@@ -10,6 +10,8 @@ export default {
       colors: {
         'green-dark': '#128945',
         'green-light': '#8cc63e',
+        'gray-dark': '#111827',
+        'gray-light': '#1f2937',
       },
     },
   },

@@ -1,6 +1,7 @@
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
 import AosInit from '@/components/modules/AosInit';
+import ScrollToTop from '@/components/modules/scrollToTop';
 
 export default function RootLayout({ children }) {
  
@@ -10,6 +11,7 @@ export default function RootLayout({ children }) {
         {children}
         <Toaster />
         <AosInit />
+        <ScrollToTop />
       </body>
     </html>
   );

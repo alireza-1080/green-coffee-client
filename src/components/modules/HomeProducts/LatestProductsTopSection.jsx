@@ -5,13 +5,10 @@ import Image from 'next/image';
 const LatestProductsTopSection = () => {
   return (
     <div className="flex justify-between items-center px-2 py-6">
-      <h1 data-aos="fade-right" data-aos-once='true' className="font-bold">
+      <h1 className="font-bold">
         Latest Products
       </h1>
       <Link 
-      data-aos="fade-right" 
-      data-aos-once='true'
-      data-aos-delay='200'
       href="/products">
         <div className="flex items-center gap-1 group  xl:-translate-x-4">
           <p className="group-hover:text-green-dark">View All</p>

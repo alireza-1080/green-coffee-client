@@ -7,6 +7,7 @@ const LatestProductItem = ({ product, index }) => {
   return (
     <Link
       data-aos="fade-up"
+      data-aos-once="true"
       className={`w-full group/item relative ${index >= 3 ? 'hidden' : ''}
       ${index >= 3 && index < 4 ? 'sm:block' : ''}
       ${index >= 4 && index < 6 ? 'md:block' : ''}

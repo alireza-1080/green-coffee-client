@@ -5,7 +5,7 @@ import BuyCoffeLikeProPicture from '@/components/modules/BuyCoffeLikePro/BuyCoff
 const BuyCoffeeLikeProSection = () => {
   return (
     <div className='w-full h-fit bg-gray-200 py-10 sm:px-5 sm:py-16 lg:container mx-auto'>
-        <div className='flex flex-col gap-10 mx-auto overflow-hidden md:flex-row md:'> 
+        <div className='flex flex-col gap-10 mx-auto overflow-hidden md:flex-row'> 
             <div className='sm:self-start md:w-1/2 md:h-full  md:justify-self-end md:self-center'>
                 <BuyCoffeLikeProContent />
             </div>

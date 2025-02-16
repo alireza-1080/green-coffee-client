@@ -1,6 +1,6 @@
 import React from 'react';
-import HomePageNavigation from '@/components/modules/HomePageNavigation.jsx';
-import HomePageSlider from '@/components/modules/HomePageSlider.jsx';
+import HomePageNavigation from '@/components/modules/Header/HomePageNavigation.jsx';
+import HomePageSlider from '@/components/modules/Header/HomePageSlider.jsx';
 import HeaderServer from '@/components/server/HeaderServer.jsx';
 
 const HomePageHeader = () => {

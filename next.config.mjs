@@ -5,7 +5,7 @@ const nextConfig = {
         return [
             {
                 source: '/api/:path*',
-                destination: 'https://green-coffee-server.vercel.app/:path*',
+                destination: 'https://green-coffee-server.vercel.app/api/:path*',
             },
         ];
     },

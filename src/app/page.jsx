@@ -16,7 +16,7 @@
 import React from 'react';
 
 const handleTestServerConnection = async () => {
-  const response = await fetch('https://green-coffee-server.vercel.app/api', {
+  const response = await fetch('/api', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -28,39 +28,43 @@ const handleTestServerConnection = async () => {
   if (response.ok) {
     console.log(data);
   } else {
-    console.error('Failed to connect to server!');
+    console.error(data);
   }
 }
 
 const handleSetCookie = async () => {
   const response = await fetch('/api/set-cookie', {
-    method: 'GET',
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     credentials: 'include',
   });
 
+  const data = await response.json();
+
   if (response.ok) {
-    console.log('Cookie set successfully!');
+    console.log(data);
   } else {
-    console.error('Failed to set cookie!');
+    console.error(data);
   }
 }
 
 const handleDeleteCookie = async () => {
   const response = await fetch('/api/delete-cookie', {
-    method: 'GET',
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     credentials: 'include',
   });
 
+  const data = await response.json();
+
   if (response.ok) {
-    console.log('Cookie deleted successfully!');
+    console.log(data);
   } else {
-    console.error('Failed to delete cookie!');
+    console.error(data);
   }
 }
 

@@ -5,7 +5,7 @@ import AosInit from '@/components/modules/AosInit';
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-gray-500">
+      <body className="max-w-full max-h-fit bg-gray-500">
         {children}
         <Toaster />
         <AosInit />

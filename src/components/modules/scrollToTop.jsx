@@ -15,8 +15,14 @@ export default function ScrollToTop() {
     document.body.style.overflow = "hidden";
     window.addEventListener("scroll", preventScroll, { passive: false });
 
+    // Repeatedly set scroll to (0, 0) every 10 ms for 1 second
+    const intervalId = setInterval(() => {
+      window.scrollTo(0, 0);
+    }, 10);
+
     // Re-enable scrolling after 1 second
     setTimeout(() => {
+      clearInterval(intervalId);
       document.body.style.overflow = "auto";
       window.removeEventListener("scroll", preventScroll);
     }, 1000);

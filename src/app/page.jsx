@@ -16,7 +16,7 @@
 import React from 'react';
 
 const handleTestServerConnection = async () => {
-  const response = await fetch('https://green-coffee-server.vercel.app', {
+  const response = await fetch('https://green-coffee-server.vercel.app/api', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const handleTestServerConnection = async () => {
 }
 
 const handleSetCookie = async () => {
-  const response = await fetch('https://green-coffee-server.vercel.app/api/set-cookie', {
+  const response = await fetch('/api/set-cookie', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ const handleSetCookie = async () => {
 }
 
 const handleDeleteCookie = async () => {
-  const response = await fetch('https://green-coffee-server.vercel.app/api/delete-cookie', {
+  const response = await fetch('/api/delete-cookie', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

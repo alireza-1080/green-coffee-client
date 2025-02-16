@@ -12,7 +12,7 @@ const HomePageNavigation = ({ navItems, userProfileMenu, isUserLoggedIn }) => {
   const [isSticky, setIsSticky] = React.useState(false);
 
   React.useEffect(() => {
-    window.scrollTo(0, 0); // Ensure scroll position is reset to 0 on page refresh
+    
 
     setIsSticky(window.scrollY > 48);
 

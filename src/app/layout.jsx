@@ -3,6 +3,7 @@ import { Toaster } from 'react-hot-toast';
 import AosInit from '@/components/modules/AosInit';
 
 export default function RootLayout({ children }) {
+ 
   return (
     <html lang="en">
       <body className="max-w-full max-h-fit bg-gray-500">

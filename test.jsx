@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -22,22 +21,15 @@ const LatestArticlesSlider = ({ latestArticles }) => {
         spaceBetween={30}
         pagination={{
           clickable: true,
-          dynamicBullets: true, // Add dynamic bullets
-          dynamicMainBullets: 3, // Show max 3 main bullets
-        }}
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
         }}
         modules={[Pagination]}
         className="mySwiper"
       >
         {latestArticles.map((article, index) => (
-            <SwiperSlide key={`${article.title}-${index}`} className="w-full h-fit overflow-hidden relative group max-w-80 xl:max-w-[393.33px] rounded-lg">
+          <SwiperSlide
+            className="w-full h-fit overflow-hidden relative group max-w-80 xl:max-w-[393.33px] rounded-lg"
+            key={`article-${index}`}
+          >
             <Link href={article.href} className="block">
               <Image
                 src={'/jpg/morning-coffee.jpg'}

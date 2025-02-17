@@ -1,6 +1,6 @@
 import React from 'react';
 import LatestArticlesServer from '@/components/server/LatestArticlesServer';
-import LatestArticlesSlider from '@/components/modules/LatestArticles/LatestArticlesSlider';
+import LatestArticlesSlider from '@/components/modules/LatestArticles/LatestArticlesSliderSection';
 
 const LatestArticles = () => {
   return (

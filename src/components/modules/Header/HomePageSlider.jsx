@@ -21,6 +21,7 @@ const HedaerSlider = () => {
           modules={[Pagination, Autoplay]}
           autoplay={true}
           loop={true}
+          speed={800}
         >
           <SwiperSlide>
             <Image

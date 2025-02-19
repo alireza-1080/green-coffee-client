@@ -3,29 +3,59 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-      @apply scrollbar-custom;
-    }
+  html {
+    @apply scrollbar-custom;
   }
+}
 
-  :root {
-    --swiper-theme-color: #8cc63e;
-    --swiper-pagination-bullet-inactive-color: #128945;
-    --swiper-pagination-bullet-inactive-opacity: 0.5;
-    --swiper-pagination-bullet-size: 8px;
-    --swiper-pagination-bullet-horizontal-gap: 4px;
-    --swiper-pagination-color: #8cc63e;
-    --swiper-pagination-bullet-active-color: #8cc63e;
-  }
-  
-  /* Override Swiper's default styles */
-  .swiper-pagination-bullet-active {
-    background: var(--swiper-pagination-bullet-active-color) !important;
-  }
-  
-  .swiper-pagination-bullet {
-    background: var(--swiper-pagination-bullet-inactive-color);
-    opacity: var(--swiper-pagination-bullet-inactive-opacity);
-  }
+:root {
+  --swiper-theme-color: #8cc63e;
+  --swiper-pagination-bullet-inactive-color: #128945;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-color: #8cc63e;
+  --swiper-pagination-bullet-active-color: #8cc63e;
 
-  
+  --swiper-navigation-size: 24px;
+  --swiper-navigation-color: #8cc63e;
+}
+
+/* Override Swiper's default styles */
+.swiper-pagination-bullet-active {
+  background: var(--swiper-pagination-bullet-active-color) !important;
+}
+
+.swiper-pagination-bullet {
+  background: var(--swiper-pagination-bullet-inactive-color);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity);
+}
+
+
+/* Add these new styles after your existing Swiper styles */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px !important;
+  height: 40px !important;
+  background-color: transparent !important;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: var(--swiper-navigation-size) !important;
+  color: var(--swiper-navigation-color);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: transparent !important;
+  transform: scale(1.1);
+}
+
+.swiper-button-disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed;
+}

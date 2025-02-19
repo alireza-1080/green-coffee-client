@@ -69,39 +69,6 @@ const LatestArticlesServer = ({ children }) => {
       href: '/blog/the-science-behind-your-morning-cup',
       imageUrl: '/jpg/morning-coffee.jpg',
     },
-    {
-      title:
-        'The Science Behind Your Morning Cup: How Coffee Boosts Energy and Focus',
-      publishDate: {
-        day: '01',
-        month: 'Feb',
-        year: '2025',
-      },
-      href: '/blog/the-science-behind-your-morning-cup',
-      imageUrl: '/jpg/morning-coffee.jpg',
-    },
-    {
-      title:
-        'The Science Behind Your Morning Cup: How Coffee Boosts Energy and Focus',
-      publishDate: {
-        day: '01',
-        month: 'Feb',
-        year: '2025',
-      },
-      href: '/blog/the-science-behind-your-morning-cup',
-      imageUrl: '/jpg/morning-coffee.jpg',
-    },
-    {
-      title:
-        'The Science Behind Your Morning Cup: How Coffee Boosts Energy and Focus',
-      publishDate: {
-        day: '01',
-        month: 'Feb',
-        year: '2025',
-      },
-      href: '/blog/the-science-behind-your-morning-cup',
-      imageUrl: '/jpg/morning-coffee.jpg',
-    },
   ];
 
   return (

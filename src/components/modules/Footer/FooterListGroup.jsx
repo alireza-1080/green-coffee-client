@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import toast from 'react-hot-toast';
 
 const FooterListGroup = ({ item }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -9,13 +10,19 @@ const FooterListGroup = ({ item }) => {
     setIsOpen(!isOpen);
   };
 
+  const handleDemoLink = () => {
+    toast('The link is not active.', {
+      icon: '☕',
+    });
+  }
+
   return (
     <div className="w-full h-fit">
       <div
         onClick={handleOpen}
-        className="w-full flex justify-between items-center cursor-pointer py-5"
+        className="w-full flex justify-between items-center py-5"
       >
-        <h2 className="font-semibold">{item.title}</h2>
+        <h2 className="font-semibold cursor-context-menu">{item.title}</h2>
         <Image
           src={'/png/angle-small-down-white.png'}
           width={20}
@@ -33,6 +40,7 @@ const FooterListGroup = ({ item }) => {
       >
         {item.subs.map((sub, index) => (
           <p
+            onClick={handleDemoLink}
             key={index}
             className="px-5 py-3 lg:px-0 lg:text:normal text-gray-300 cursor-pointer hover:text-green-light"
           >

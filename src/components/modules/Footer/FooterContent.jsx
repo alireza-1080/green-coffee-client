@@ -3,7 +3,7 @@ import FooterListGroup from '@/components/modules/Footer/FooterListGroup';
 
 const FooterContent = ({ footerItems }) => {
   return (
-    <div className="w-full bg-green-dark text-white py-10 px-5 md:text-lg lg:container lg:mx-auto">
+    <div className="w-full bg-green-dark text-white py-10 px-5 md:text-lg lg:container lg:mx-auto transition-all">
       <div className="lg:flex lg:justify-between lg:gap-10">
         {footerItems.map((item, index) => (
           <FooterListGroup key={index} item={item} />

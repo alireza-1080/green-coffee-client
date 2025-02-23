@@ -8,7 +8,7 @@ import Footer from '@/components/templates/Home/Footer.jsx'
 
 const Home = () => {
   return (
-    <div className='mb-96'>
+    <div>
       <HomePageHeader />
       <LatestProducts />
       <BuyCoffeeLikeProSection />

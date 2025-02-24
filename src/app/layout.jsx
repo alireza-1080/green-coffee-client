@@ -2,6 +2,7 @@ import './globals.css';
 import { Toaster } from 'react-hot-toast';
 import AosInit from '../components/logical/AosInit.jsx';
 import ScrollToTop from '../components/logical/ScrollToTop.jsx';
+import ScrollToTopButton from '@/components/modules/scrollToTop/ScrollToTop';
 
 export default function RootLayout({ children }) {
  
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
         <Toaster />
         <AosInit />
         <ScrollToTop />
+        <ScrollToTopButton />
       </body>
     </html>
   );

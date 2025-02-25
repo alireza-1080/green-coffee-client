@@ -12,7 +12,7 @@ const AuthContent = () => {
       <div className="w-full h-full lg:container lg:mx-auto flex justify-center items-center">
         <div className="w-11/12 h-fit  rounded-lg max-w-lg relative z-10">
           <div className="bg-sky-500 w-64 h-64 rounded-full absolute top-0 right-0 translate-x-1/3 translate-y-5 -z-50"></div>
-          <div className="bg-pink-500 w-48 h-48 rounded-full absolute bottom-0 left-0 -translate-x-1/4 translate-y-1/3 -z-50"></div>
+          <div className="bg-pink-500 w-48 h-48 rounded-full absolute bottom-0 left-0 -translate-x-1/4 -translate-y-1/3 -z-50"></div>
           <div className='w-full h-full bg-black/40 backdrop-blur-md p-10 rounded-lg'>
             {loginRegisterForget === 'login' ? (
               <div className="w-full h-full flex items-center justify-center transition-all duration-300">

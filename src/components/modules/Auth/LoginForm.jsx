@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import toast from 'react-hot-toast';
 
 const LoginForm = ({ setLoginRegisterForget }) => {
   const [identifier, setIdentifier] = React.useState('');
@@ -14,6 +15,8 @@ const LoginForm = ({ setLoginRegisterForget }) => {
     if (!identifier) {
       return toast.error('Username/Email cannot be empty');
     }
+
+    setIdentifier(identifier.trim());
 
     //! Check if password is not empty
     if (!password) {

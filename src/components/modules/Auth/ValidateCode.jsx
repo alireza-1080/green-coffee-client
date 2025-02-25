@@ -1,35 +1,37 @@
-import React from 'react'
-import toast from 'react-hot-toast'
+import React from 'react';
+import toast from 'react-hot-toast';
 
-const ValidateCode = ({setStep}) => {
+const ValidateCode = ({ setStep }) => {
+  const [code, setCode] = React.useState('');
 
-    const [code, setCode] = React.useState('');
+  const handleChangeCode = (e) => {
+    if (e.target.value.length > 6) {
+      return;
+    }
 
-    const handleChangeCode = (e) => {
-        if (e.target.value.length > 6) {
-          return;
-        }
+    if (isNaN(e.target.value)) {
+      return;
+    }
 
-        if (isNaN(e.target.value)) {
-          return;
-        }
+    setCode(e.target.value);
+  };
 
-        setCode(e.target.value);
-      };
-      
-      const handleContinueClick = () => {
-        if (code.length !== 6) {
-          return toast.error('Code must be 6 digits');
-        }
-      
-        //! Send request to server to validate code
-        //! If successful, set step to 3
-        
-        setStep(3);
-      };
+  const handleContinueClick = () => {
+
+    setCode(code.trim());
+
+    if (code.trim().length !== 6) {
+      return toast.error('Code must be 6 digits');
+    }
+
+    //! Send request to server to validate code
+    //! If successful, set step to 3
+
+    setStep(3);
+  };
   return (
     <>
-        <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2">
         <input
           type={'text'}
           value={code}
@@ -49,7 +51,7 @@ const ValidateCode = ({setStep}) => {
         </button>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ValidateCode
+export default ValidateCode;

@@ -14,6 +14,8 @@ const SendCodeToEmail = ({ setStep }) => {
           return toast.error('Username/Email cannot be empty');
         }
 
+        setIdentifier(identifier.trim());
+
         //! Send request to server to send code to email
         //! If successful, set step to 2
     

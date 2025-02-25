@@ -16,25 +16,31 @@ const RegisterForm = ({ setLoginRegisterForget }) => {
     e.preventDefault();
 
     //! Validate name
-    const { error: nameError } = nameValidator.validate(name);
+    const {value: nameValue, error: nameError } = nameValidator.validate(name);
 
     if (nameError) {
      return toast.error(nameError.message);
     }
 
+    setName(nameValue);
+
     //! Validate username
-    const { error: usernameError } = usernameValidator.validate(username);
+    const {value: usernameValue, error: usernameError } = usernameValidator.validate(username);
 
     if (usernameError) {
       return toast.error(usernameError.message);
     }
 
-    //! Validate email
-    const { error: emailError } = emailValidator.validate(email);
+    setUsername(usernameValue);
 
+    //! Validate email
+    const {value: emailValue, error: emailError } = emailValidator.validate(email);
+    console.log(emailValue)
     if (emailError) {
       return toast.error(emailError.message);
     }
+
+    setEmail(emailValue);
 
     //! Validate password
     const { error: passwordError } = passwordValidator.validate(password);
@@ -59,9 +65,7 @@ const RegisterForm = ({ setLoginRegisterForget }) => {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
 
-    const trimmedName = titleCased.trim();
-
-    setName(trimmedName);
+    setName(titleCased);
   }
 
   const handleUsernameChange = (e) => {

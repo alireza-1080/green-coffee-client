@@ -40,7 +40,7 @@ const HeaderServer = ({ children }) => {
   ];
 
   //! This should be fetched from the backend
-  const isUserLoggedIn = true;
+  const isUserLoggedIn = false;
 
   return (
     <>

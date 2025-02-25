@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import AuthServer from '@/components/server/AuthServer';
+import AuthContent from '@/components/modules/Auth/AuthContent';
 
-const Auth = () => {
+const AuthPage = () => {
   return (
-    <div className='text-3xl text text-yellow-400 text-center mt-72'>Auth</div>
-  )
-}
+    <AuthServer>
+      <AuthContent />
+    </AuthServer>
+  );
+};
 
-export default Auth
+export default AuthPage;

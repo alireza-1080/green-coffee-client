@@ -40,7 +40,7 @@ const RegisterForm = ({ setLoginRegister }) => {
       <div className="flex flex-col gap-2">
         <input
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => setUsername(e.target.value.toLowerCase())}
           type={'text'}
           className="rounded-md px-4 py-1 outline-none border-2 border-solid border-green-light focus:border-4 order-2 transition-all"
         />
@@ -51,7 +51,7 @@ const RegisterForm = ({ setLoginRegister }) => {
       <div className="flex flex-col gap-2">
         <input
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value.toLowerCase())}
           type={'email'}
           className="rounded-md px-4 py-1 outline-none border-2 border-solid border-green-light focus:border-4 order-2 transition-all"
         />

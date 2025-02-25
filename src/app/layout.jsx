@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
  
   return (
     <html lang="en">
-      <body className="max-w-full max-h-fit bg-gray-500">
+      <body className="max-w-full overflow-x-hidden max-h-fit bg-gray-500">
         {children}
         <Toaster />
         <AosInit />

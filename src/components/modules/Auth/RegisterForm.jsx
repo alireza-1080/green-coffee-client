@@ -12,7 +12,7 @@ const RegisterForm = ({ setLoginRegisterForget }) => {
   const [password, setPassword] = React.useState('');
   const [confirmPassword, setConfirmPassword] = React.useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     //! Validate name
@@ -54,8 +54,29 @@ const RegisterForm = ({ setLoginRegisterForget }) => {
       return toast.error('Passwords do not match');
     }
 
-    //! Register request should be sent to the server here
-    toast.success('Registration successful');
+    //! Send registration request to the server
+    const response = await fetch('/api/users/create-user', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: nameValue,
+        username: usernameValue,
+        email: emailValue,
+        password,
+        confirmPassword,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      toast.success(data.message);
+      setLoginRegisterForget('login');
+    } else {
+      toast.error(data.message);
+    }
 
     
   };

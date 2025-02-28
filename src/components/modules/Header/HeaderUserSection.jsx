@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import HedaerUserProfileSubMenuSection from './HedaerUserProfileSubMenuSection.jsx';
+import HedaerUserProfileSubMenuSection from './HeaderUserProfileSubMenuSection.jsx';
 
 const HeaderUserSection = ({ isUserLoggedIn, userProfileMenu, pathArray }) => {
   return (

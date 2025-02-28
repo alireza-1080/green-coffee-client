@@ -52,10 +52,6 @@ const LoginForm = ({ setLoginRegisterForget }) => {
       }),
     });
 
-    const data = response.json();
-    
-    toast.success(data.message);
-
     if (response.ok) {
       toast.success('Logged in successfully');
       redirect('/');

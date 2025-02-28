@@ -16,16 +16,17 @@ const RegisterForm = ({ setLoginRegisterForget }) => {
     e.preventDefault();
 
     //! Validate name
-    const {value: nameValue, error: nameError } = nameValidator.validate(name);
+    const { value: nameValue, error: nameError } = nameValidator.validate(name);
 
     if (nameError) {
-     return toast.error(nameError.message);
+      return toast.error(nameError.message);
     }
 
     setName(nameValue);
 
     //! Validate username
-    const {value: usernameValue, error: usernameError } = usernameValidator.validate(username);
+    const { value: usernameValue, error: usernameError } =
+      usernameValidator.validate(username);
 
     if (usernameError) {
       return toast.error(usernameError.message);
@@ -34,8 +35,9 @@ const RegisterForm = ({ setLoginRegisterForget }) => {
     setUsername(usernameValue);
 
     //! Validate email
-    const {value: emailValue, error: emailError } = emailValidator.validate(email);
-    console.log(emailValue)
+    const { value: emailValue, error: emailError } =
+      emailValidator.validate(email);
+    
     if (emailError) {
       return toast.error(emailError.message);
     }
@@ -77,8 +79,6 @@ const RegisterForm = ({ setLoginRegisterForget }) => {
     } else {
       toast.error(data.message);
     }
-
-    
   };
 
   const handleNameChange = (e) => {
@@ -87,15 +87,15 @@ const RegisterForm = ({ setLoginRegisterForget }) => {
     });
 
     setName(titleCased);
-  }
+  };
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value.toLowerCase());
-  }
+  };
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value.toLowerCase());
-  }
+  };
 
   return (
     <form

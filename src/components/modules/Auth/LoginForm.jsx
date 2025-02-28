@@ -2,28 +2,67 @@
 import React from 'react';
 import Image from 'next/image';
 import toast from 'react-hot-toast';
+import emailValidator from '@/validators/email.js';
+import usernameValidator from '@/validators/username.js';
+import passwordValidator from '@/validators/password.js';
+import { redirect } from 'next/navigation';
 
 const LoginForm = ({ setLoginRegisterForget }) => {
   const [identifier, setIdentifier] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [rememberMe, setRememberMe] = React.useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    //! Check if identifier is not empty
-    if (!identifier) {
-      return toast.error('Username/Email cannot be empty');
+    
+    //! Check if identifier is a valid email
+    const { value: validatedEmail, error: emailError } =
+    emailValidator.validate(identifier.trim());
+    
+    //! Check if identifier is a valid username
+    const { value: validatedUsername, error: usernameError } =
+    usernameValidator.validate(identifier.trim());
+    
+    if (emailError && usernameError) {
+      return toast.error('Invalid email or username');
     }
-
+    
     setIdentifier(identifier.trim());
+    
+    //! Check if password is a valid password
+    const { value: validatedPassword, error: passwordError } =
+    passwordValidator.validate(password);
+    
+    if (passwordError) {
+      return toast.error('Invalid password');
+    }
+    
+    //! Send login request to the server
+    const response = await fetch('/api/users/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+      body: JSON.stringify({
+        identifier,
+        password,
+        rememberMe,
+      }),
+    });
 
-    //! Check if password is not empty
-    if (!password) {
-      return toast.error('Password cannot be empty');
+    const data = response.json();
+    
+    toast.success(data.message);
+
+    if (response.ok) {
+      toast.success('Logged in successfully');
+      redirect('/');
+    } else {
+      toast.error('Invalid credentials');
     }
 
-    //! Login request should be sent to the server here
   };
 
   const handleIdentifierChange = (e) => {

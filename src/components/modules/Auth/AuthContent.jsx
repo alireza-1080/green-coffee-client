@@ -8,7 +8,7 @@ const AuthContent = () => {
   const [loginRegisterForget, setLoginRegisterForget] = React.useState('login');
 
   return (
-    <div className="w-full overflow-x-hidden min-h-screen h-fit overflow-y-auto py-10 sm:mx-auto">
+    <div className="w-full overflow-x-hidden h-fit overflow-y-auto py-10 sm:mx-auto">
       <div className="w-full h-full lg:container lg:mx-auto flex justify-center items-center">
         <div className="w-11/12 h-fit  rounded-lg max-w-lg relative z-10">
           <div className="bg-sky-500 w-64 h-64 rounded-full absolute top-0 right-0 translate-x-1/3 translate-y-5 -z-50"></div>

@@ -42,7 +42,7 @@ const HomePageNavigation = ({ navItems, userProfileMenu, isUserLoggedIn }) => {
         !isSticky && 'lg:rounded-xl'
       }  lg:shadow-xl bg-white ${
         !isSticky ? 'lg:bg-white/60 backdrop-blur-sm' : 'bg-white backdrop-blur-none'
-      } lg:px-4 transition-all border-b-2 xl:border-b-4 border-green-dark`}
+      } lg:px-4 ${!isSticky ? "transition-all" : ""} border-b-2 xl:border-b-4 border-green-dark`}
     >
       <header className="flex items-center py-2 px-5">
         <div className="lg:order-3">

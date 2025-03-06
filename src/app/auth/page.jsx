@@ -3,7 +3,6 @@ import AuthServer from '@/components/server/AuthServer'
 import AuthContent from '@/components/modules/Auth/AuthContent'
 import HeaderServer from '@/components/server/HeaderServer'
 import HomePageNavigation from '@/components/modules/Header/HomePageNavigation'
-import Footer from '@/components/templates/Home/Footer'
 
 const AuthPage = () => {
   return (
@@ -18,7 +17,6 @@ const AuthPage = () => {
           <AuthContent />
         </AuthServer>
       </div>
-      <Footer />
     </div>
   )
 }

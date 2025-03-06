@@ -1,19 +1,13 @@
 import React from 'react'
 import HomePageNavigation from '@/components/modules/Header/HomePageNavigation.jsx'
 import HeaderServer from '@/components/server/HeaderServer.jsx'
-import Footer from '@/components/templates/Home/Footer.jsx'
 
 const About = () => {
   return (
     <div>
-      <div
-        className="lg:container mx-auto sticky top-0 z-50"
-      >
-        <HeaderServer>
-          <HomePageNavigation />
-        </HeaderServer>
-      </div>
-      {/* Content */}
+      <HeaderServer>
+        <HomePageNavigation />
+      </HeaderServer>
       <div className="px-5 py-10 sm:py-14 lg:py-20 bg-gray-100 flex flex-col items-center gap-12 lg:gap-20 lg:container lg:mx-auto">
         <div className="flex flex-col items-center gap-4 lg:gap-8 lg:w-3/4">
           <h1 className="text-green-dark font-bold text-xl md:text-2xl">About Green Coffee</h1>
@@ -57,7 +51,6 @@ const About = () => {
           </p>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

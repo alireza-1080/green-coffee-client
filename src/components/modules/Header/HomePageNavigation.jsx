@@ -9,7 +9,7 @@ const HomePageNavigation = ({ navItems, userProfileMenu, isUserLoggedIn }) => {
   const path = usePathname()
   const pathArray = path.split('/')
 
-  const [isSticky, setIsSticky] = React.useState(false)
+  const [isSticky, setIsSticky] = React.useState(true)
   const [isItMainPage, setIsItMainPage] = React.useState(false)
 
   React.useEffect(() => {
